@@ -56,9 +56,9 @@ header {
 
 #banner {
   background-image: url("/images/banner.png");
-  background-size: auto;
-  background-position: left center;
-  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
 }
 
 #info {
