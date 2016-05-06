@@ -84,8 +84,8 @@ gulp.task('index', function() {
     var sources = gulp.src(assetpaths, {read: false});
 
     return target.pipe(inject(sources))
-        .pipe(injectPartials())
         .pipe(replace('/dist', ''))
+        .pipe(injectPartials())
 	.pipe(gulpif(isproduction(), gulpminifyhtml({
 	  conditionals: true,
 	  spare: true

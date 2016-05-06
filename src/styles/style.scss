@@ -3,6 +3,9 @@
 @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "../bower_components/bootswatch-scss/readable/bootswatch";
 
+//example site
+//http://www.mattwitek.com/
+
 //color pallet
 //https://coolors.co/app/160c28-efcb68-ebe9e9-ffffff-000411
 
@@ -34,6 +37,11 @@ body {
     }
 }
 
+section {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
 header {
   margin-bottom: 4em;
     #site-navbar {
@@ -61,14 +69,14 @@ header {
   height: 550px;
 }
 
-#info {
+#bio {
   background-color: $bg-dark-color;
 }
 
 footer {
   background-color: $nav-color;
   color: $header-color;
-  text-align: left;
+  text-align: center;
   font-size: 1.5em;
   padding-bottom: 2em;
   padding-top: 2em;
