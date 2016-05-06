@@ -1,0 +1,93 @@
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "../bower_components/bootswatch-scss/readable/variables";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "../bower_components/bootswatch-scss/readable/bootswatch";
+
+//color pallet
+//https://coolors.co/app/160c28-efcb68-ebe9e9-ffffff-000411
+
+$fg-color: #000411;
+$bg-color: #FFFFFF;
+$bg-dark-color: #EBE9E9;
+$bdy-color: #160C28;
+$nav-color: #160C28;
+$link-color: #EFCB68;
+$header-color: #EFCB68;
+
+body {
+    background-color: $bdy-color;
+    color: $fg-color;
+    #page {
+	background-color: $bg-color;
+    }
+    a {
+	color: $link-color;
+	&:hover {
+	    text-decoration: none;
+	}
+	span.gc-cs-link {
+	    color: $link-color;
+	}
+    }
+    h1, h2, h3, h4 {
+      color: $header-color;
+    }
+}
+
+header {
+  margin-bottom: 4em;
+    #site-navbar {
+	border: 0;
+	background-color: $nav-color;
+	.navbar-brand {
+	  position: absolute;
+	  padding-top: 0.4em;
+	  h1 {
+	    margin: 0;
+	    position: relative;
+	    top: 0;
+	  }
+	}
+	.navbar-nav a {
+	    color: $header-color;
+	}
+    }
+}
+
+#banner {
+  background-image: url("/images/banner.png");
+  background-size: auto;
+  background-position: left center;
+  height: 600px;
+}
+
+#info {
+  background-color: $bg-dark-color;
+}
+
+footer {
+  background-color: $nav-color;
+  color: $header-color;
+  text-align: left;
+  font-size: 1.5em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  h4 {
+    margin-top: 1.65em;
+  }
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  i {
+    &:hover {
+	color: $bg-dark-color;
+    }
+    a {
+	&:hover {
+	    color: $bg-dark-color;
+	}
+    }
+  }
+}
