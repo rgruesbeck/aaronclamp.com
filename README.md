@@ -1,9 +1,9 @@
-# contractcae.com
-http://contractcae.com.s3-website-us-west-2.amazonaws.com/
+# aaronclamp.com
 
-Website for contractcae.com
+Website aaronclamp.com
 ```sh
 npm install
+bower install
 ```
 
 ## Get Started
@@ -22,13 +22,14 @@ npm run deploy
 ```
 
 ## Todo
-get feedback
-build latex and markdown module with react
- http://math.stackexchange.com/editing-help
- http://docs.mathjax.org/en/latest/start.html
- http://strapdownjs.com/
- http://thlorenz.com/browserify-markdown-editor/
+mock out events
+get get colapsed menu working
+get calendar from google calendars
+client router?
+route domain to s3 bucket
+
 
 # References
-http://www.veryst.com/
-http://acrokin.com/index.html
+http://www.mattwitek.com/
+https://developers.google.com/google-apps/calendar/quickstart/js#prerequisites
+https://www.kacurak.com/blog/turn-google-calendar-into-events-list-on-website
