@@ -33,6 +33,7 @@ body {
 	}
     }
     h1, h2, h3, h4 {
+      font-weight: bold;
       color: $header-color;
     }
 }
@@ -71,6 +72,28 @@ header {
 
 #bio {
   background-color: $bg-dark-color;
+}
+
+#events {
+  list-style-type: none;
+  padding: 0;
+  .event-card {
+    color: $header-color;
+    span {
+      padding-right: 15px;
+    }
+    .date, .time {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .venu, .address, .price {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .details {
+      color: $nav-color;
+    }
+  }
 }
 
 footer {

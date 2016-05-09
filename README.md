@@ -22,8 +22,7 @@ npm run deploy
 ```
 
 ## Todo
-mock out events
-get get colapsed menu working
+create events with react
 get calendar from google calendars
 client router?
 route domain to s3 bucket
