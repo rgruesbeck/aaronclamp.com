@@ -134,6 +134,7 @@ gulp.task('favicon', function() {
 //Watch
 gulp.task('watch', function() {
     gulp.watch(paths.js, ['js']);
+    gulp.watch(paths.jsx, ['js']);
     gulp.watch(paths.styles, ['styles']);
     gulp.watch(paths.images, ['images']);
     gulp.watch(paths.blog, ['blog']);

@@ -18,7 +18,8 @@ npm run server
 
 ## Deploy
 ```sh
-npm run deploy
+npm run build
+npm run deploy-staging/deploy-production
 ```
 
 ## Todo
