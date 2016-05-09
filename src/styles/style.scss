@@ -44,23 +44,23 @@ section {
 }
 
 header {
-  margin-bottom: 4em;
-    #site-navbar {
-	border: 0;
-	background-color: $nav-color;
-	.navbar-brand {
-	  position: absolute;
-	  padding-top: 0.4em;
-	  h1 {
-	    margin: 0;
-	    position: relative;
-	    top: 0;
-	  }
-	}
-	.navbar-nav a {
-	    color: $header-color;
-	}
+  nav.navbar.navbar-default {
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+    background-color: $nav-color;
+    .navbar-brand {
+      padding-top: 0;
+      h1 {
+        margin: 0;
+        position: relative;
+        top: 0;
+      }
     }
+    .navbar-nav a {
+      color: $header-color;
+    }
+  }
 }
 
 #banner {
@@ -68,6 +68,9 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 550px;
+}
+
+#gigs {
 }
 
 #bio {
