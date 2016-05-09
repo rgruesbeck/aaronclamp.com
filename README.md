@@ -30,5 +30,6 @@ route domain to s3 bucket
 
 # References
 http://www.mattwitek.com/
+http://www.peterapfelbaum.com/
 https://developers.google.com/google-apps/calendar/quickstart/js#prerequisites
 https://www.kacurak.com/blog/turn-google-calendar-into-events-list-on-website

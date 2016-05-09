@@ -5,12 +5,12 @@ var googleCalendar = function (opts) {
   this.upcoming = function(cb){
     return [
       {
-	date: "Now",
-	time: "4:00",
-	price: "$5",
-	venue: "Starry Plough",
-	address: "123 Fake St.",
-	details: "BYOB"
+        date: "Now",
+        time: "4:00",
+        price: "$5",
+        venue: "Starry Plough",
+        address: "123 Fake St.",
+        details: "BYOB"
       }
     ];
   };
@@ -21,14 +21,6 @@ var googleCalendar = function (opts) {
 };
 
 $(document).ready(function(){
-  //instantiate Shows
-  var Shows = googleCalendar({});
-  //get upcoming shows and render to page
-  Shows.upcoming(function(shows){
-    console.log("hello");
-    console.log(shows);
-  });
-
   //smooth scroll to element on click
   $('a[href^="#"]').on('click',function (e) {
     e.preventDefault();

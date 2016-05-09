@@ -4,6 +4,7 @@ var gulpminifyhtml = require('gulp-minify-html');
 var gulpif = require('gulp-if');
 var inject = require('gulp-inject');
 var injectPartials = require('gulp-inject-partials');
+var react = require('gulp-react')
 var uglify = require('gulp-uglify');
 var replace = require('gulp-replace');
 var sass = require('gulp-sass');
@@ -16,6 +17,7 @@ var paths = {
     partials: 'src/partials/*.html',
     blog: 'src/blog/**/*',
     js: 'src/js/**/*.js',
+    jsx: 'src/jsx/**/*.jsx',
     lib: 'src/lib/**/*.js',
     styles: ['src/styles/**/*.scss', 'src/styles/**/*.css'],
     font: 'src/font/**/*',
@@ -38,24 +40,33 @@ gulp.task('clear', function(cb) {
     del(['dist'], cb);
 });
 
-//Minify and copy JavaScripts
-gulp.task('js', function() {
-    return gulp.src(paths.js)
-	.pipe(gulpif(isproduction(), uglify()))
-	.pipe(gulpif(isproduction(), rev()))
-	.pipe(gulp.dest('dist/js'));
+//Copy Bower Components
+gulp.task('bower', function() {
+    return bower('src/bower_components')
+        .pipe(gulp.dest('dist/bower_components'));
 });
 
 //Copy JavaScripts from Lib
 gulp.task('lib', function() {
     return gulp.src(paths.lib)
-	.pipe(gulp.dest('dist/lib'));
+        .pipe(gulp.dest('dist/lib'));
 });
 
-//Copy Bower Components
-gulp.task('bower', function() {
-    return bower('src/bower_components')
-	.pipe(gulp.dest('dist/bower_components'));
+//Compile React Templates
+gulp.task('jsx', function() {
+    return gulp.src(paths.jsx)
+    .pipe(react())
+    .pipe(gulpif(isproduction(), uglify()))
+    .pipe(gulpif(isproduction(), rev()))
+    .pipe(gulp.dest('dist/js'));
+});
+
+//Minify and copy JavaScripts
+gulp.task('js', ['lib', 'jsx'], function() {
+    return gulp.src(paths.js)
+    .pipe(gulpif(isproduction(), uglify()))
+    .pipe(gulpif(isproduction(), rev()))
+    .pipe(gulp.dest('dist/js'));
 });
 
 //Copy styles
@@ -136,7 +147,6 @@ gulp.task('build',
 	'clear',
 	'bower',
 	'js',
-	'lib',
 	'styles',
 	'fonts',
 	'images',
