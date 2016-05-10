@@ -26,8 +26,8 @@ var paths = {
 };
 
 var assetpaths = [
-    'dist/js/**/*.js',
     'dist/lib/**/*.js',
+    'dist/js/**/*.js',
     'dist/styles/*.css'
 ];
 
