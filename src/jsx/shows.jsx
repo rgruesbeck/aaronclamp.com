@@ -57,5 +57,5 @@ var Shows = React.createClass({
 
 ReactDOM.render(
     <Shows calendarId="aaronclamp.com_b7fo0kt1qs4t91n6glnt4teju0@group.calendar.google.com" apiKey="AIzaSyDZ4PygSkkKST37XP7haH-5JWXPDS3xhvk" />,
-    document.getElementById('shows')
+    document.getElementById('events')
 );
