@@ -45,10 +45,14 @@ section {
 
 header {
   nav.navbar.navbar-default {
-    border: 0;
+    border: none;
     border-radius: 0;
     margin: 0;
     background-color: $nav-color;
+    &.davbar-toggle {
+      color: $header-color;
+      border: none;
+    }
     .navbar-brand {
       padding-top: 0;
       h1 {
@@ -57,17 +61,33 @@ header {
         top: 0;
       }
     }
-    .navbar-nav a {
-      color: $header-color;
+    .navbar-nav {
+      border: none;
+      a {
+        color: $header-color;
+        border: none;
+      }
+    }
+    .navbar-collapse {
+      border: none;
+    }
+    .navbar-toggle.collapsed {
+      border: none;
+      .icon-bar {
+        color: $header-color;
+      }
+      &:hover {
+        background-color: $header-color;
+      }
     }
   }
 }
 
 #banner {
-  background-image: url("/images/banner.png");
+  background-image: url("/images/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
+  height: 800px;
 }
 
 #gigs {
