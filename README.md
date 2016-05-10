@@ -33,4 +33,5 @@ route domain to s3 bucket
 http://www.mattwitek.com/
 http://www.peterapfelbaum.com/
 https://developers.google.com/google-apps/calendar/quickstart/js#prerequisites
+http://stackoverflow.com/questions/13651017/accessing-google-calendar-api-with-javascript-without-authorization
 https://www.kacurak.com/blog/turn-google-calendar-into-events-list-on-website
